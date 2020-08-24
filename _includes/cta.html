@@ -1,0 +1,71 @@
+                    {% if page.layout == "home" and page.title == "Home" %}
+                    {% for events in site.data.events | limit: 1 %}
+                    <div class="col-md-6 p-5">
+                        <div class="wc-content-p-lg">
+                            <h1 class="display-4">
+                                {{ site.cta.events.heading }}
+                            </h1>
+                            <hr class="wc-custom-hr">
+                            <p class="pr-5">{{ site.cta.events.text }}</p>
+                            <div class="wc-event-block row">
+                                <div class="col-12">
+                                    <h3>{{ events.title }}</h3>
+                                </div>
+                                <div class="col-12 col-md-6 row">
+                                    <div class="col-4 wc-icon-lft py-3">
+                                        <i class="fa fa-ticket-alt fa-3x"></i>
+                                    </div>
+                                    <div class="col-8 wc-event-text">
+                                        <p>Tickets Information:</p>
+                                        <span>{{ events.pricing }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7 row">
+                                    <div class="col-4 wc-icon-lft py-3">
+                                        <i class="fa fa-calendar-alt fa-3x"></i>
+                                    </div>
+                                    <div class="col-8 wc-event-text">
+                                        <p>Date(s):</p>
+                                        <span>
+                                            {% if events.multiple != "true" %}
+                                                {{ events.date | date_to_string }}
+                                            {% endif %}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 row">
+                                    <div class="col-4 wc-icon-lft py-3">
+                                        <i class="fa fa-street-view fa-3x"></i>
+                                    </div>
+                                    <div class="col-8 wc-event-text">
+                                        <p>{{ events.street }}</p>
+                                        <span>{{ events.city }}, {{ events.state}} {{ events.zip }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7 row">
+                                    <div class="col-4 wc-icon-lft py-3">
+                                        <i class="fa fa-parking fa-3x"></i>
+                                    </div>
+                                    <div class="col-8 wc-event-text">
+                                        <p>Parking:</p>
+                                        <span>{{ events.parking }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-primary">
+                                        get your pass now
+                                    </a>
+                                </div>
+                                
+                                <div class="col-6 pt-1">
+                                    <a href="#" class="text-link">
+                                        view events &rarr;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}

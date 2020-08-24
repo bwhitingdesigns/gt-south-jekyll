@@ -1,0 +1,23 @@
+.navbar {
+    .navbar-nav {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.85em;
+        letter-spacing: 1.44px;
+        .nav-item {
+            padding: 0px 2em;
+            transition: 0.3s ease-in-out all;
+            &.active a {
+                color: $secondary-color;
+            }
+            a:hover {
+                text-decoration: none;
+                color: $secondary-color;
+            }
+        }
+        .btn {
+            position: relative;
+            top: -10px;
+        }
+    }
+}

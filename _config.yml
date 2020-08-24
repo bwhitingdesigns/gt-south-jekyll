@@ -1,0 +1,58 @@
+
+title: GT South
+email: your-email@example.com
+description: Local bar and gaming tavern in Montgomery, AL near the Montgomery Air Force Base. Come inside for laughs and games with all your fellow geeks and nerds.
+baseurl: "" 
+url: "" 
+tel: 334-356-9833
+timezone:
+address: 2015 Cong W L Dickinson Dr, Montgomery, AL 36109
+
+logo: /uploads/logo.png
+
+# plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+
+# exclude settings
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+
+# markdown format
+markdown: kramdown
+
+# blog post permalink structure
+permalink: /:categories/:title/
+
+# collection settings
+collections:
+  menu:
+    permalink: "/menu/:name/"
+    output: true
+  events:
+    output: true
+  info:
+    output: true
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+

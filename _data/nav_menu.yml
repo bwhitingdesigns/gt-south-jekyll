@@ -1,0 +1,19 @@
+- title: Home
+  url: /
+- title: Events
+  subnav:
+    - title: Gaming
+      url: /events/gaming/
+    - title: Music
+      url: /events/music/
+- title: Info
+  url: /about-gtsouth/
+- title: Menu
+  subnav:
+    - title: Food Menu
+      url: /menu/food/
+    - title: Drinks/Beverage
+      url: /menu/drinks/
+- title: Play Trailer?
+  url: /video/1.mpg
+  button: true

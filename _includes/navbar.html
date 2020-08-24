@@ -1,0 +1,41 @@
+<div class="container-fluid py-2 px-0">
+    <nav class="navbar navbar-expand-md">
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Open Menu">
+              <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="pl-4">
+              <a href="/" class="navbar-brand">
+                  <h4 class="display-4">GT South</h4>
+              </a>
+          </div>
+
+          <div class="collapse navbar-collapse d-md-flex flex-row-reverse pr-5" id="navbarNav">
+              <ul class="navbar-nav">
+                  {% assign links = site.data.nav_menu %}
+                  {% for link in links %}
+                      {% if link.subnav %}
+                          <li class="nav-item dropdown {% if link.url == page.url %}active{% endif %}">
+                              <a href="#" class="nav-item dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }} <span class="caret"></span></a>
+                              <div class="dropdown-menu fade-down">
+                                  {% for sublink in link.subnav %}
+                                  <a href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}" class="dropdown-item">
+                                      {{ sublink.title }}
+                                  </a>
+                                  {% endfor %}
+                              </div>
+                          </li>
+                      {% else %}
+                          <li class="nav-item {% if link.url == page.url %}active{% endif %}">
+                              <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" {% if link.button %}class="btn btn-gts-primary"{% endif %}>
+                                  {{ link.title }}
+                              </a>
+                          </li>
+                      {% endif %}
+                  {% endfor %}
+              </ul>
+        </div>
+
+      </nav>
+</div>

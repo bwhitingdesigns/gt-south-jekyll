@@ -1,0 +1,48 @@
+<div id="{{ page.title | slugify }}-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="{{ page.carousel-speed }}">
+    
+  <div class="carousel-inner" role="listbox">
+      
+    <div class="carousel-item active">
+        <img src="{{ page.slide_image_1 }}" class="d-block img-fluid" alt="...">
+        <div class="carousel-caption">
+           <h1 class="display-4 text-uppercase">
+                {{ page.slide_1_heading }}
+            </h1>
+            <p>
+                {{ page.slide_1_text }}
+            </p>
+        </div>
+    </div>
+    
+    {% if page.slide_image_2 %}
+    <div class="carousel-item">
+      <img src="{{ page.slide_image_2 }}" class="d-block img-fluid" alt="...">
+        <div class="carousel-caption">
+           <h1 class="display-4 text-uppercase">
+                {{ page.slide_2_heading }}
+            </h1>
+            <p>
+                {{ page.slide_2_text }}
+            </p>
+        </div>
+    </div>
+    {% endif %}
+      
+    {% if page.slide_image_3 %}
+    <div class="carousel-item">
+      <img src="{{ page.slide_image_3 }}" class="d-block img-fluid" alt="...">
+        <div class="carousel-caption">
+           <h1 class="display-4 text-uppercase">
+                {{ page.slide_3_heading }}
+            </h1>
+            <p>
+                {{ page.slide_3_text }}
+            </p>
+        </div>
+    </div>
+    {% endif %}
+      
+  </div>
+
+    
+</div>
