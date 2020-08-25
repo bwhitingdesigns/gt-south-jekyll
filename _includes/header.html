@@ -3,22 +3,28 @@
     <!-- navbar -->
     {% include navbar.html %}
     <!-- navbar ends -->
-    
+
     <div class="jumbotron jumbotron-fluid">
     <div class="wrapper col-10 mx-auto">
         <h1 class="background__text">GT South</h1>
+        {% if page.layout == "default" %}
         <div class="glitch-effect">
             <img src="/uploads/frame-1-regular.png" class="img-fluid">
             <img src="/uploads/frame-1.png" class="img-fluid">
             <img src="/uploads/frame-1-glitch.png" class="img-fluid">
         </div>
+        {% elsif page.layout == "alt-default" %}
+        <div class="glitch-effect">
+          <img src="/uploads/frame-1.png" class="img-fluid">
+        </div>
+        {% endif %}
         <h1 class="foreground__text">is gaming</h1>
-        
+
         <a class="btn btn-gts-secondary btn__slide" href="#">
             View Videos
         </a>
     </div>
     </div>
 
-    
+
 </header>

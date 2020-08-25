@@ -1,4 +1,37 @@
-        <footer>
-            
-        </footer>
+<footer>
+    <div class="container-fluid">
+        <!-- footer subscribe form -->
+        <div class="row">
+            <div class="col-md-5 col-12 text-center pt-4 offset-md-1">
+                <h1>GT South</h1>
+            </div>
+
+            <div id="footer__subscribeForm" class="col-md-5 col-12">
+                {% include footer-form.html %}
+            </div>
+        </div>
+        <!-- end of footer subscribe form -->
+    </div>
+    
+    <!-- copyrights -->
+    <div id="copyright" class="container-fluid">
+        <div class="row py-4 px-2">
+            <div class="col-auto mx-auto">
+            <ul class="list-inline">
+                <li class="list-inline-item">&copy; by {{ site.title }} {{ site.time | date: '%Y' }}</li>
+                <li class="list-inline-item"><a href="https://www.bwhitingdesigns.com/" class="text-link">Developed and Designed by Brian Whiting</a></li>
+                {% assign footer_links = site.data.footer_menu %}
+                {% for footer_link in footer_links %}
+                <li class="list-inline-item">
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ footer_link.url }}">
+                        {{ footer_link.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end of copyrights -->
+</footer>
 

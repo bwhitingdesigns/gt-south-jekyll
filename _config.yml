@@ -2,8 +2,8 @@
 title: GT South
 email: your-email@example.com
 description: Local bar and gaming tavern in Montgomery, AL near the Montgomery Air Force Base. Come inside for laughs and games with all your fellow geeks and nerds.
-baseurl: "" 
-url: "" 
+baseurl: ""
+url: ""
 tel: 334-356-9833
 timezone:
 address: 2015 Cong W L Dickinson Dr, Montgomery, AL 36109
@@ -38,6 +38,8 @@ permalink: /:categories/:title/
 
 # collection settings
 collections:
+  pages:
+    output: true
   menu:
     permalink: "/menu/:name/"
     output: true
@@ -45,6 +47,15 @@ collections:
     output: true
   info:
     output: true
+
+# defaults for collections
+defaults:
+  -
+    scope:
+      path: ""
+      type: "menu" # name of the collection
+    values:
+      layout: "food-main"
 
 # Pagination Settings
 pagination:
