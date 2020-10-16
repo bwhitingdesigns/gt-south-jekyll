@@ -1,5 +1,5 @@
 $base-font: 'Raleway', sans-serif;
-$heading-font: 'Morpheus', cursive;
+$heading-font: 'Metamorphous', cursive;
 
 $primary-color: #0E1F58;
 $secondary-color: #40D992;
@@ -32,22 +32,29 @@ h3 {
     line-height: calc(18px + 0.7vw); /* Responsive Vertical Rhythm */
 }
 
-h4 { 
-    font-size: 1.3em; 
+h4 {
+    font-size: 1.3em;
 }
-h5 { 
-    font-size: 1.243em; 
+h5 {
+    font-size: 1.243em;
 }
-h6 { 
-    font-size: 1.132em; 
+h6 {
+    font-size: 1.132em;
 }
 
-h4, h5, h6 { 
+h4, h5, h6 {
     line-height: calc(18px + .2vw); /* Responsive Vertical Rhythm */
 }
 
 .jumbotron {
     background-color: transparent;
+    font-family: $base-font;
+    h3 {
+      font-weight: 800; font-family: $base-font !important;
+    }
+    span {
+        color: #40D992;
+    }
 }
 
 #drinks__home {
@@ -55,9 +62,9 @@ h4, h5, h6 {
         url("/uploads/nuka-cola-bg.png"),
         url("/uploads/yoshi-1.png"),
         url("/uploads/star-wars-bg.png");
-    background-position: 
-        8% 31%, 
-        50% 67%, 
+    background-position:
+        8% 31%,
+        50% 67%,
         85% 39%;
     background-repeat: no-repeat;
 }

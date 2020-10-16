@@ -4,26 +4,16 @@
     {% include navbar.html %}
     <!-- navbar ends -->
 
-    <div class="jumbotron jumbotron-fluid">
-    <div class="wrapper col-10 mx-auto">
-        <h1 class="background__text">GT South</h1>
-        {% if page.layout == "default" %}
-        <div class="glitch-effect">
-            <img src="/uploads/frame-1-regular.png" class="img-fluid">
-            <img src="/uploads/frame-1.png" class="img-fluid">
-            <img src="/uploads/frame-1-glitch.png" class="img-fluid">
+    <div class="jumbotron-fluid jumbotron">
+        <div class="container-fluid pl-5 pr-5">
+            <div class="col-sm-12 col-md-4">
+                <h3 class="display-4">
+                    Home of <span>Grog</span>, <span>Geeks</span>, and <span>Gamers</span>
+                </h3>
+                <a href="#" class="btn gt-btn-primary">See Menu</a>
+                <a href="#" class="text-link">View Gallery </a>
+            </div>
         </div>
-        {% elsif page.layout == "alt-default" %}
-        <div class="glitch-effect">
-          <img src="/uploads/frame-1.png" class="img-fluid">
-        </div>
-        {% endif %}
-        <h1 class="foreground__text">is gaming</h1>
-
-        <a class="btn btn-gts-secondary btn__slide" href="#">
-            View Videos
-        </a>
-    </div>
     </div>
 
 
