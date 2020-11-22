@@ -5,8 +5,11 @@
         font-size: 0.85em;
         letter-spacing: 1.44px;
         .nav-item {
-            padding: 0px 2em;
+            padding: 0px 1.25em;
             transition: 0.3s ease-in-out all;
+            a {
+                color: white;
+            }
             &.active a {
                 color: $secondary-color;
             }
@@ -17,7 +20,7 @@
         }
         .btn {
             position: relative;
-            top: -10px;
+            top: -5px;
         }
     }
 }

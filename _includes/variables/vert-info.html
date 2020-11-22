@@ -1,0 +1,15 @@
+{% assign contact = site.data.contact_info %}
+<div class="gts-mini-info-vertical">
+    <ul class="list-inline">
+        {% if contact.tel %}
+        <li class="list-inline-item">
+            <a href="tel:+{{ contact.tel | remove: '-' }}" class="text-link">{{ contact.tel | default: '334-356-9833' }}</a>
+        </li>
+        {% endif %}
+        {% if contact.email %}
+        <li class="list-inline-item">
+            <a href="mailto:{{ contact.email }}" class="text-link">{{ contact.email }}</a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

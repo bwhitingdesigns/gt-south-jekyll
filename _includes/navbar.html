@@ -1,4 +1,4 @@
-<div class="container-fluid py-2 px-0">
+<div class="container-fluid px-4 mb-5">
     <nav class="navbar navbar-expand-md">
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Open Menu">
@@ -28,8 +28,8 @@
                           </li>
                       {% else %}
                           <li class="nav-item {% if link.url == page.url %}active{% endif %}">
-                              <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" {% if link.button %}class="btn btn-gts-primary"{% endif %}>
-                                  {{ link.title }}
+                              <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}" {% if link.button %}class="btn btn-gts-primary-alt"{% endif %}>
+                                  <span>{{ link.title }}</span>
                               </a>
                           </li>
                       {% endif %}

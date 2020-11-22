@@ -1,0 +1,12 @@
+{% assign slinks = site.data.social_menu %}
+<div class="col-auto ml-auto">
+    <ul class="list-inline">
+        {% for social in slinks %}
+        <li class="list-inline-item">
+            <a class="social-icon" href="{{ social.url }}">
+                <i class="fab fa-{{ social.icon }}"></i>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

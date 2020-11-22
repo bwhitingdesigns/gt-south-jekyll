@@ -1,48 +1,64 @@
 footer {
-    h1 {
-        font-size: 8em;
+    background-image: url("/uploads/large-hanging-pic.jpg");
+    background-repeat: no-repeat; background-position: center center; background-size: cover;
+    background-color: rgba(0,0,0,0.80); background-blend-mode: overlay;
+    color: white;
+    h1, h2, h3, h4, h5, h6 {
+        color: $secondary-color;
     }
-    .list-inline {
-        .list-inline-item::after {
-            content: "\00b7";
-            width: 1px; height: 1px;
-            padding: 0px 0.5em;
-        }
-        .list-inline-item:last-child::after {
-            visibility: hidden;
-        }
+    .list-inline li {
+        padding-left: 5px; padding-right: 5px;
+        a.social-icon {
+            color: white;
+            opacity: 0.7;
+            transition: 0.5s ease-out;
+            &:hover {
+                color: $secondary-color;
+                opacity: 1;
+            }
+        }   
     }
 }
 
-#footer__subscribeForm {
-    h3 {
-        font-family: $base-font; font-weight: 900;
-        text-transform: uppercase;
+#footer-menu {
+    li {
+        padding-top: 0.25rem;
+        a.text-link {
+            font-weight: normal;
+            text-transform: none;
+        }
     }
 }
 
 .footer-form {
-    border: 3px solid $secondary-color;
-    padding: 0.5em 1em;
+    padding: 1em 0px;
     display: flex;
     flex-direction: row;
-    color: $secondary-color;
+    color: white;
     input {
-        flex-grow: 2;
+        flex-grow: 1;
         border: none;
-        background-color: transparent;
-        color: $secondary-color;
+        background-color: rgba(255,255,255,0.07);
+        color: white;
+        padding: 1rem 8rem 1rem 1rem;
         &::placeholder {
-            color: $secondary-color;
+            color: white;
+            transition: 0.5s ease-out;
         }
         &:focus {
         outline: none;
         }
     }
     button {
+        position: absolute;
+        right: 3rem; bottom: 3rem;
         background-color: transparent;
-        color: $secondary-color;
+        color: white;
         border: none; border-radius: 0px;
+        transition: 0.5s ease-out;
+        &:hover {
+            color: $secondary-color;
+        }
     }
 }
 

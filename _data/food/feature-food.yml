@@ -1,0 +1,41 @@
+- section: home-page
+  
+  lists:
+    - title: Starting Zone
+      id: starting-zone
+      control: starting-zone-food
+    - title: Dungeon Adventures
+      id: dungeon-adventures
+      control: dungeon-adventures-food
+    - title: Tank Burgers
+      id: tank-burgers
+      control: tank-burgers-food
+    - title: Healer Tacos
+      id: healer-tacos
+      control: healer-tacos-food
+      
+  food-items:
+    - title: Stating Zone
+      control: starting-zone-food
+      items:
+        - title: Chicken Sandwich Starters
+          image: /uploads/food_1.jpg
+          price: $7.99
+        - title: Bacon Chicken & Onion Rings
+          image: /uploads/food_2.jpg
+          price: $10.99
+        - title: Fried Cheese
+          image: /uploads/food_3.jpg
+          price: $2.99
+          
+    - title: Dungeon Adventures
+      control: dungeon-adventures-food
+      items:
+        - title: Bacon Chicken & Onion Rings
+          image: /uploads/food_2.jpg
+          price: $10.99
+        - title: Fried Cheese
+          image: /uploads/food_3.jpg
+          price: $2.99          
+          
+          

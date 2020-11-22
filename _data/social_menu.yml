@@ -1,0 +1,16 @@
+- title: Facebook
+  url: https://www.facebook.com/GTSouth
+  icon: facebook-f
+  location: footer
+- title: Twitter
+  url: https://www.facebook.com/GTSouth
+  icon: twitter
+  location: footer
+- title: Instagram
+  url: http://www.instagram.com/gtsouth
+  icon: instagram
+  location: footer
+- title: Youtube
+  url: https://www.youtube.com/c/GTSouthGeekGamingTavern
+  icon: youtube
+  location: footer

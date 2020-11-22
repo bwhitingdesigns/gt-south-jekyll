@@ -1,37 +1,26 @@
 <footer>
-    <div class="container-fluid">
-        <!-- footer subscribe form -->
+    <div class="container-fluid px-5 pt-5">
         <div class="row">
-            <div class="col-md-5 col-12 text-center pt-4 offset-md-1">
-                <h1>GT South</h1>
+            <div class="col-md-4 col-12 pt-2">
+                <h3>{{ site.title }}</h3>
+                <p class="pt-3">{{ site.description }}</p>
             </div>
-
-            <div id="footer__subscribeForm" class="col-md-5 col-12">
+            
+            {% include /variables/footer-menu.html %}
+            
+            <div class="col-md-4 col-6 pt-4">
                 {% include footer-form.html %}
             </div>
         </div>
-        <!-- end of footer subscribe form -->
-    </div>
-    
-    <!-- copyrights -->
-    <div id="copyright" class="container-fluid">
-        <div class="row py-4 px-2">
-            <div class="col-auto mx-auto">
-            <ul class="list-inline">
-                <li class="list-inline-item">&copy; by {{ site.title }} {{ site.time | date: '%Y' }}</li>
-                <li class="list-inline-item"><a href="https://www.bwhitingdesigns.com/" class="text-link">Developed and Designed by Brian Whiting</a></li>
-                {% assign footer_links = site.data.footer_menu %}
-                {% for footer_link in footer_links %}
-                <li class="list-inline-item">
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ footer_link.url }}">
-                        {{ footer_link.title }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+        
+        <div class="row mt-5">
+            <div class="col-4">
+                <span>Copyrights {{ site.time | date: '%Y' }} {{ site.title }}</span> 
             </div>
+            
+            {% include /variables/social-media.html %}
         </div>
     </div>
-    <!-- end of copyrights -->
+    
 </footer>
 

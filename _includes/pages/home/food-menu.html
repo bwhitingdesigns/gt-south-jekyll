@@ -1,0 +1,44 @@
+{% assign foods = site.data.food.feature-food %}
+{% for food in foods %}
+<div id="gts-home__food-menu" class="container-fluid p-5 my-5 accordion">
+    <h1>Check the menu</h1>
+    <div class="row">
+        <div class="col-md-4 col-12 no-gutters">
+            <ul id="menu-list-food" class="list-unstyled">
+                {% for list in food.lists %}
+                <li class="list-item py-3">
+                    <a class="text-link" data-toggle="collapse" href="#{{ list.control }}" aria-expanded="false" aria-controls="{{ list.control }}">
+                        {{ list.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="col-md-8 col-12">
+            <div class="row">
+                {% for food in food.food-items %}
+                <div class="col-auto">
+                    <div class="collapse" id="{{ food.control }}">
+                        <div class="card-deck">
+                            {% assign items = food.items %}
+                            {% for item in items %}
+                            <!-- food item -->
+                            <div class="card gts-food-card">
+                                <img src="{{ item.image }}" class="card-img" alt="{{ item.title }}">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">{{ item.title }}</h5>
+                                    <p class="card-text">{{ item.price }}</p>
+                                </div>
+                            </div>
+                            <!-- food item -->
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

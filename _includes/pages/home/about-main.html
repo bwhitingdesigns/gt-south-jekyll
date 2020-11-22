@@ -1,0 +1,44 @@
+{% assign gts-about = site.data.pages.home | where: "section", "about" %}
+{% for about in gts-about %}
+<div id="gts-home__about" class="container-fluid p-5 my-5">
+    <div class="row">
+        <div class="col-md-5 mx-auto img-wrapper">
+            <img src="/uploads/large-hanging-pic.jpg" class="img-fluid" alt="...">
+        </div>
+
+        <div class="col-md-6 px-5 pt-5">
+            <h1>{{ about.heading }}</h1>
+            <div class="mt-4">
+                <p><strong>{{ about.text[0] }}</strong></p>
+            </div>
+            <div class="mt-4">
+                <p>{{ about.text[1] }}</p>
+            </div>
+            {% for link in about.url %}
+            <a href="{{ link.link }}" class="text-link-alt">
+                {{ link.text }} {% for icon in link.icon %}{% if icon.active == true %}<i class="fas {{ icon.symbol }}"></i>{% endif %}{% endfor %}
+            </a>
+            {% endfor %}
+        </div>
+        
+        <div id="gts-home__feature-holders" class="col-md-10 col-12">
+            <div class="row">
+                {% for feature in about.featured %}
+                <!-- column start -->
+                <div class="col-6 row">
+                    <div class="col-2 mx-auto">
+                        <img src="{{ feature.icon }}" class="img-fluid">
+                    </div>
+                    <div class="col-9 mx-auto">
+                        <h2>{{ feature.heading }}</h2>
+                        <p>{{ feature.text }}</p>
+                    </div>
+                </div>
+                <!-- column end -->
+                {% endfor %}
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endfor %}

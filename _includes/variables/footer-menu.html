@@ -1,0 +1,11 @@
+{% assign menu = site.data.footer_menu %}
+<div class="col-md-3 mx-md-auto col-6">
+    <h6>Links</h6>
+    <ul id="footer-menu" class="list-unstyled">
+        {% for link in menu %}
+        <li>
+            <a href="{{ link.url }}" class="text-link">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

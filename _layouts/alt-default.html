@@ -10,53 +10,19 @@
     <!-- header end -->
 
     <section>
-
-      <!-- start of drinks__home -->
-        <div id="drinks__home" class="container-fluid py-5">
-            <div class="text-center">
-                <h2>Featured Drinks</h2>
-                <small>We make your favorite video game themed drinks and give it a spin - if it not made, we will create it</small>
-            </div>
-
-            <!-- random featured drinks -->
-            <div class="container my-5">
-                <div class="row">
-                    {% for featured in site.data.drinks.featured limit: 3 %}
-                    <div class="col-md-4 col-12">
-                        <div class="wrapper__left-slant">
-                            <div class="card" style="--data-bg: url({{ featured.image }});">
-
-                                <div class="card-img-overlay">
-                                    <h6>{{ featured.title }}</h6>
-                                    <p>{{ featured.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                <!-- end of random featured drinks -->
-
-                <div class="col-6 row mx-auto py-5 text-center">
-
-                    <div class="col-md-6 col-12">
-                        <a class="btn btn-gts-primary" href="/menu/drinks/">
-                            The Elixirs
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-12">
-                        <a class="btn btn-gts-secondary" href="/menu/food/">
-                            The Food
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <!-- end of home__drinks -->
-
+        
+        <!-- about home -->
+        {% include /pages/home/about-main.html %}
+        
+        <!-- food items -->
+        {% include /pages/home/food-menu.html %}
+        
+        <!-- cta -->
+        {% include /pages/home/cta-xl.html %}
+        
+        <!-- map -->
+        {% include /variables/map-fullview.html %}
+        
     </section>
     <!-- footer -->
     {% include footer.html %}

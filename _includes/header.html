@@ -1,20 +1,29 @@
-<header>
+<header id="gts-header" class="jumbotron jumbotron-fluid">
 
     <!-- navbar -->
     {% include navbar.html %}
     <!-- navbar ends -->
 
-    <div class="jumbotron-fluid jumbotron">
-        <div class="container-fluid pl-5 pr-5">
+    <div class="gts-header-wrapper">
+        <div class="container-fluid px-5">
             <div class="col-sm-12 col-md-4">
                 <h3 class="display-4">
                     Home of <span>Grog</span>, <span>Geeks</span>, and <span>Gamers</span>
                 </h3>
-                <a href="#" class="btn gt-btn-primary">See Menu</a>
-                <a href="#" class="text-link">View Gallery </a>
+                <div class="mt-5 row">
+                    <div class="col-6 mx-auto">
+                        <a href="#" class="btn btn-gts-primary">See Menu</a>
+                    </div>
+                    <div class="col-6 mx-auto my-auto">
+                        <a href="#" class="text-link">View Gallery <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- vertical info -->
+    {% include /variables/vert-info.html %}
+    <!-- vertical info -->
 
 </header>

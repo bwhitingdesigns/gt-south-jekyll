@@ -1,0 +1,20 @@
+{% assign ctas = site.data.pages.home | where: "section", "cta" %}
+{% for cta in ctas %}
+<div id="cta-1" class="container-fluid mt-5" style="--data-bg: url( {{ cta.background }} )">
+    <div class="row">
+        <div class="col-12 col-md-7 px-md-5">
+            <h1>{{ cta.heading }}</h1>
+            {% for url in cta.url %}
+            <a class="btn btn-gts-primary mt-4" href="{{ url.link }}">
+                {{ url.text }}
+            </a>
+            {% endfor %}
+            {% if cta.text %}
+            <p class="mt-3"><small>* {{ cta.text }}</small></p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% include /pages/home/cta-owner-quote.html %}

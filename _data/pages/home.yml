@@ -1,0 +1,28 @@
+- section: about
+  heading: Welcome to GT South
+  text: 
+    -  GTSouth prides itself at being an all-inclusive venue for all walks of life in the geek and gamer lifestyle - and beyond! You come here for the drinks, music, and games and then stay for the friends you make. We have a wide range of drinks, food, and gaming to play with. So if you are an introvert, this is the place to find your people and call your second home!
+    -  Meeting new friends, playing games from console to board games, and enjoying the custom drinks that are inspired by your geek knowledge. We have it all for you!
+  url:
+    - link: /about-gts/
+      text: more about us
+      icon: 
+        - active: true
+          symbol: fa-long-arrow-alt-right
+  featured:
+    - heading: Executive Chef
+      text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+      icon: /uploads/chef.svg
+    - heading: Great Music
+      text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+      icon: /uploads/sound-waves.svg
+  
+- section: cta
+  background: /uploads/cta-image-1.jpg
+  heading: GT South, where gaming is no longer a solo event - when you have friends like us
+  text: Games are currently limited due to Covid-19
+  url:
+    - link: /events-gts/
+      text: view events
+  
+  
